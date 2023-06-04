@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "949e3d74-861b-46ec-864b-6b512b40f1d9",
+		"name": "AI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21468401"
+	},
+	"item": [
+		{
+			"name": "API AI with params",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstMessage\": \"No app consta como motorista de bicicleta e o motorista apareceu de moto. Foi grosseiro, falou em tom ameaçador, tirando satisfação após eu perguntar, de maneira educada como pode ser visto no chat, se eu estava reclamando do pedido estar atrasado, quando fui conferir se houve um problema por estar parado (poderia ter ocorrido um acidente). Péssima conduta.\",\n    \"subject\": \"Veículo de entrega diferente do mostrado no app\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/v1/ai/relatedTo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"v1",
+						"ai",
+						"relatedTo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Long file from Databricks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/v1/ai/relatedToFromCSV",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"v1",
+						"ai",
+						"relatedToFromCSV"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
