@@ -24,3 +24,16 @@ IMPORTANT: This project is using sandbox API from iFood.
 
 ## REQUESTS
 The POSTMAN requests are in the POSTMAN_REQUESTS folder.
+
+## HOW TO RUN
+You can run the app following the steps:
+1. Go to project folder;
+2. `yarn` or `npm install` to install dependencies;
+3. `yarn start` or `npm run start` to run the server;
+4. You must see the follow message:
+```
+====================================
+⚡️ Server started on port 3333! ⚡️
+====================================
+```
+5. Using the POSTMAN file, you can do the requests.
