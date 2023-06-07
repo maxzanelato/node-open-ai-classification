@@ -1,6 +1,7 @@
 export interface IAiIsRelatedToParams {
-  firstMessage: string;
   subject: string;
+  orderId?: string;
+  firstMessage: string;
 
   result?: string;
 }

@@ -1,3 +1,5 @@
+import moment from 'moment';
+import { performance } from 'perf_hooks';
 import { Request, Response, Router } from 'express';
 
 import AiService from '../services/AiService';
@@ -20,6 +22,8 @@ aiRouter.get('/relatedToFromCSV', async (_req, res: Response) => {
 
 aiRouter.get('/relatedTo', async (req: Request, res: Response) => {
   const { firstMessage, subject } = req.body;
+
+  const t0 = performance.now();
 
   try {
     const openAiService = new OpenAiService();
@@ -45,6 +49,10 @@ aiRouter.get('/relatedTo', async (req: Request, res: Response) => {
         },
       });
     }
+  } finally {
+    const t1 = performance.now();
+    const duration = moment.utc(t1 - t0).format('HH:mm:ss.SSS');
+    console.log(duration);
   }
 });
 

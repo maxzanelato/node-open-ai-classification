@@ -8,7 +8,7 @@ export default class OpenAiService {
     firstMessage,
     subject,
   }: IAiIsRelatedToParams) {
-    const query = `Verifique ${firstMessage} tem relação com ${subject}. Caso possua relação, retorne a palavra SIM, e caso não tenha relação, retorne NAO.`;
+    const query = `Verifique se o texto "${firstMessage}" está associado ao motivo de contato descrito dentro do texto "${subject}". Caso esteja associado, retorne a palavra SIM; e caso não esteja associado, retorne NAO.`;
 
     return query;
   }
